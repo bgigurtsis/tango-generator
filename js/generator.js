@@ -7,7 +7,7 @@ export function createCategorySettings(config) {
     div.className = 'category-item';
     
     const label = document.createElement('label');
-    label.textContent = `${category.name} items:`;
+    label.textContent = `${category.name}`;
     
     const select = document.createElement('select');
     select.id = `count-${category.id}`;
