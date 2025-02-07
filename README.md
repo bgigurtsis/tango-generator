@@ -42,6 +42,10 @@ Each category has a `"color"` property. You can use these colors:
 - `bg-purple-500`: Purple
 - `bg-orange-500`: Orange
 - `bg-teal-500`: Teal
+- `bg-pink-500`: Pink
+- `bg-indigo-500`: Indigo
+- `bg-cyan-500`: Cyan 
+- `bg-amber-500`: Amber 
 
 #### Changing Category Order
 To reorder categories, cut and paste entire category blocks within the `categories` array. Categories appear in the order they're listed in the file.

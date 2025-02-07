@@ -101,6 +101,12 @@ body {
 .bg-purple-500 { background-color: #9C27B0; }
 .bg-orange-500 { background-color: #FF9800; }
 .bg-teal-500 { background-color: #009688; }
+.bg-pink-500 { background-color: #E91E63; }
+.bg-indigo-500 { background-color: #3F51B5; }
+.bg-cyan-500 { background-color: #00BCD4; }
+.bg-amber-500 { background-color: #FFC107; }
+.bg-lime-500 { background-color: #8BC34A; }
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
