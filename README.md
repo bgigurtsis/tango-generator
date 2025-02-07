@@ -42,7 +42,6 @@ Each category has a `"color"` property. You can use these colors:
 - `bg-purple-500`: Purple
 - `bg-orange-500`: Orange
 - `bg-teal-500`: Teal
-- More colours are available here: https://tailscan.com/tailwind/backgrounds/background-color-class
 
 #### Changing Category Order
 To reorder categories, cut and paste entire category blocks within the `categories` array. Categories appear in the order they're listed in the file.
