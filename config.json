@@ -1,0 +1,103 @@
+{
+  "categories": [
+    {
+      "id": "tanztheater",
+      "name": "Tanztheater Vocab",
+      "enabled": true,
+      "items": [
+        "full contraction",
+        "high release",
+        "hyper-extension of the shoulder (front & back)",
+        "twist",
+        "tilt (from above the waistline)",
+        "all ballet & contemporary vocabulary"
+      ]
+    },
+    {
+      "id": "tango",
+      "name": "Tango Vocab",
+      "enabled": true,
+      "items": [
+        "forward ochos",
+        "backward ochos",
+        "giro",
+        "barrida",
+        "gancho",
+        "sacadas altas",
+        "sacadas bajas",
+        "voleo",
+        "planeo",
+        "enrosque",
+        "calesita",
+        "volcada",
+        "colgada"
+      ]
+    },
+    {
+      "id": "theatre",
+      "name": "Theatre Objective",
+      "enabled": true,
+      "items": [
+        "to escape",
+        "to destroy",
+        "to kill",
+        "to win you over completely",
+        "to torture you",
+        "to force (you / myself to…)",
+        "to heal",
+        "to persuade"
+      ]
+    },
+    {
+      "id": "adverb",
+      "name": "Adverb",
+      "enabled": true,
+      "items": [
+        "endlessly",
+        "contentedly",
+        "slowly"
+      ]
+    },
+    {
+      "id": "dynamic",
+      "name": "Dynamic",
+      "enabled": true,
+      "items": [
+        "Swing",
+        "Flick",
+        "Throw",
+        "Punch",
+        "Melt",
+        "Push",
+        "Accent",
+        "Suck",
+        "Pull",
+        "Bounce",
+        "Sustained",
+        "Drop",
+        "Reach",
+        "Brush",
+        "Whip",
+        "Collapse",
+        "Wring",
+        "Shiver",
+        "Vibrate"
+      ]
+    },
+    {
+      "id": "principle",
+      "name": "Principle",
+      "enabled": true,
+      "items": [
+        "Muscle Relaxation",
+        "Muscle Resistance",
+        "Muscle Elongation",
+        "Distance",
+        "Relation of body parts",
+        "Placement",
+        "Rhythm",
+        "One body part leads"
+      ]
+    }
+  ]
+}
