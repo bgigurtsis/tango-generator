@@ -3,64 +3,86 @@
     {
       "id": "tanztheater",
       "name": "Tanztheater Vocab",
+      "color": "bg-blue-500",
       "enabled": true,
       "items": [
-        "full contraction",
-        "high release",
-        "hyper-extension of the shoulder (front & back)",
-        "twist",
-        "tilt (from above the waistline)",
-        "all ballet & contemporary vocabulary"
+        "Full Contraction",
+        "High Release",
+        "Hyper-extension of Shoulder (Front)",
+        "Hyper-extension of Shoulder (Back)",
+        "Twist",
+        "Tilt (Above Waistline)",
+        "Développé",
+        "Grand Plié",
+        "Port de Bras",
+        "Promenade",
+        "Floor Work",
+        "Release and Catch",
+        "Spiral"
       ]
     },
     {
       "id": "tango",
       "name": "Tango Vocab",
+      "color": "bg-green-500",
       "enabled": true,
       "items": [
-        "forward ochos",
-        "backward ochos",
-        "giro",
-        "barrida",
-        "gancho",
-        "sacadas altas",
-        "sacadas bajas",
-        "voleo",
-        "planeo",
-        "enrosque",
-        "calesita",
-        "volcada",
-        "colgada"
+        "Forward Ochos",
+        "Backward Ochos",
+        "Giro (Full Turn)",
+        "Barrida (Sweep)",
+        "Gancho (Hook)",
+        "Sacada Alta (High Displacement)",
+        "Sacada Baja (Low Displacement)",
+        "Voleo (Free Leg Swing)",
+        "Planeo (Sliding Step)",
+        "Enrosque (Twist)",
+        "Calesita (Carousel)",
+        "Volcada (Tilt)",
+        "Colgada (Lean)"
       ]
     },
     {
       "id": "theatre",
       "name": "Theatre Objective",
+      "color": "bg-red-500",
       "enabled": true,
       "items": [
-        "to escape",
-        "to destroy",
-        "to kill",
-        "to win you over completely",
-        "to torture you",
-        "to force (you / myself to…)",
-        "to heal",
-        "to persuade"
+        "To Escape",
+        "To Destroy",
+        "To Kill",
+        "To Win Over Completely",
+        "To Torture",
+        "To Force",
+        "To Heal",
+        "To Persuade",
+        "To Seduce",
+        "To Break Down",
+        "To Control",
+        "To Transform"
       ]
     },
     {
       "id": "adverb",
       "name": "Adverb",
+      "color": "bg-purple-500",
       "enabled": true,
       "items": [
-        "endlessly",
-        "contentedly",
-        "slowly"
+        "Endlessly",
+        "Contentedly",
+        "Slowly",
+        "Violently",
+        "Tenderly",
+        "Cautiously",
+        "Frantically",
+        "Deliberately",
+        "Mysteriously"
       ]
     },
     {
       "id": "dynamic",
       "name": "Dynamic",
+      "color": "bg-orange-500",
       "enabled": true,
       "items": [
         "Swing",
@@ -69,11 +91,10 @@
         "Punch",
         "Melt",
         "Push",
-        "Accent",
-        "Suck",
         "Pull",
+        "Accent",
         "Bounce",
-        "Sustained",
+        "Sustain",
         "Drop",
         "Reach",
         "Brush",
@@ -87,16 +108,21 @@
     {
       "id": "principle",
       "name": "Principle",
+      "color": "bg-teal-500",
       "enabled": true,
       "items": [
         "Muscle Relaxation",
         "Muscle Resistance",
         "Muscle Elongation",
         "Distance",
-        "Relation of body parts",
+        "Relation of Body Parts",
         "Placement",
         "Rhythm",
-        "One body part leads"
+        "One Body Part Leads",
+        "Counter-Balance",
+        "Weight Transfer",
+        "Spatial Awareness",
+        "Core Support"
       ]
     }
   ]

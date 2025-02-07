@@ -1,11 +1,9 @@
-/* Reset and Box-Sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Global Styles */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #f5f5f5;
@@ -16,127 +14,137 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 1rem;
+#generator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+#generator {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   color: #2c3e50;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-}
-
-/* Main Layout */
-main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* Settings & Generator Sections */
-#settings, #generator {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 300px;
-}
-
-#settings h2,
-#generator h2 {
-  margin-bottom: 1rem;
-  color: #34495e;
-}
-
-/* Form Groups */
-.form-group {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-select, input[type="checkbox"] {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Category Settings (Checkboxes) */
-#categorySettings {
-  margin-top: 1rem;
-}
-
 .category-item {
-  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
 }
 
 .category-item label {
-  font-weight: normal;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.category-item select {
+  width: 80px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#generateButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#generateButton:hover {
+  background: #218838;
+}
+
+#result-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
 
-/* Button Styling */
-button {
-  display: inline-block;
-  background: #2980b9;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #3498db;
-}
-
-/* Result Container */
-#resultContainer {
-  margin-top: 1.5rem;
+.item {
+  width: 120%;
+  max-width: 323px;
   padding: 1rem;
-  background: #ecf0f1;
-  border-radius: 4px;
-  min-height: 100px;
-}
-
-#resultContainer p {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-/* Footer */
-footer {
+  color: white;
   text-align: center;
-  margin-top: 2rem;
-  padding: 1rem 0;
-  border-top: 1px solid #ddd;
-  color: #7f8c8d;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
 }
 
-/* Responsive Design */
+.bg-blue-500 { background-color: #007bff; }
+.bg-green-500 { background-color: #28a745; }
+.bg-red-500 { background-color: #dc3545; }
+.bg-purple-500 { background-color: #6610f2; }
+.bg-orange-500 { background-color: #fd7e14; }
+.bg-teal-500 { background-color: #20c997; }
+
+.arrow {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin: -0.25rem 0;
+}
+
+/* Existing styles remain the same until media query */
+
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
+  .container {
+    padding: 1rem;
   }
-  main {
-    flex-direction: column;
+
+  #generator-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  #generator {
+    padding: 1.5rem;
+  }
+
+  .category-item {
+    padding: 0.75rem 0;
+  }
+
+  .category-item label {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .category-item select {
+    width: 100px;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .item {
+    width: 100%;
+    max-width: none;
+    padding: 1.25rem;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+  }
+
+  #generateButton {
+    padding: 1rem;
+    font-size: 1.25rem;
   }
 }

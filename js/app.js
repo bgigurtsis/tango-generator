@@ -1,38 +1,58 @@
-// js/app.js
-import { createCategorySettings, getSelectedCategories, generateInstructions } from './generator.js';
+import { createCategorySettings, generateInstructions } from './generator.js';
 
 let config = null;
 
-// Load the configuration from config.json
 async function loadConfig() {
   try {
     const response = await fetch('config.json');
-    if (!response.ok) throw new Error('Could not load config.json');
     config = await response.json();
-    // Populate the category settings checkboxes based on config
     createCategorySettings(config);
+    loadSavedCounts();
   } catch (error) {
-    console.error('Error loading configuration:', error);
+    console.error('Error loading config:', error);
   }
 }
 
-// Listen for the "Generate Instructions" button click
-document.getElementById('generateButton').addEventListener('click', () => {
-  const count = parseInt(document.getElementById('instructionCount').value);
-  const selectedCategories = getSelectedCategories();
-  const instructions = generateInstructions(count, config, selectedCategories);
-  displayInstructions(instructions);
-});
-
-// Display the generated instructions in the result container
-function displayInstructions(instructions) {
-  const container = document.getElementById('resultContainer');
-  container.innerHTML = '';
-  instructions.forEach((instr, idx) => {
-    const p = document.createElement('p');
-    p.textContent = `${idx + 1}. ${instr}`;
-    container.appendChild(p);
-  });
+function loadSavedCounts() {
+  const saved = localStorage.getItem('categoryCounts');
+  if (saved) {
+    const counts = JSON.parse(saved);
+    config.categories.forEach(category => {
+      const select = document.getElementById(`count-${category.id}`);
+      if (select && counts[category.id] !== undefined) {
+        select.value = counts[category.id];
+      }
+    });
+  }
 }
+
+function saveCounts() {
+  const counts = {};
+  config.categories.forEach(category => {
+    counts[category.id] = document.getElementById(`count-${category.id}`).value;
+  });
+  localStorage.setItem('categoryCounts', JSON.stringify(counts));
+}
+
+document.getElementById('generateButton').addEventListener('click', () => {
+  saveCounts();
+  const resultContainer = document.getElementById('result-container');
+  resultContainer.innerHTML = '';
+  const instructions = generateInstructions(config);
+  
+  instructions.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.className = `item ${item.category} ${config.categories.find(c => c.id === item.category).color}`;
+    div.textContent = item.text;
+    resultContainer.appendChild(div);
+    
+    if (index < instructions.length - 1) {
+      const arrow = document.createElement('div');
+      arrow.className = 'arrow';
+      arrow.textContent = '↓';
+      resultContainer.appendChild(arrow);
+    }
+  });
+});
 
 loadConfig();
