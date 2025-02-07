@@ -5,146 +5,151 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 100%;
 }
 
 #generator-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(250px, 300px) 1fr;
   gap: 2rem;
   align-items: start;
+  min-height: calc(100vh - 2rem);
 }
 
 #generator {
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 1rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1.5rem;
   color: #2c3e50;
 }
 
 .category-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
   padding: 0.5rem 0;
 }
 
 .category-item label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2c3e50;
+  font-weight: 500;
 }
 
 .category-item select {
-  width: 80px;
+  width: 100%;
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+  background-color: white;
 }
 
 #generateButton {
   width: 100%;
   padding: 0.75rem;
-  background: #28a745;
+  background: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background-color 0.2s;
 }
 
 #generateButton:hover {
-  background: #218838;
+  background: #45a049;
 }
 
 #result-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 0.5rem;
+  padding: 1rem 0;
 }
 
 .item {
-  width: 120%;
-  max-width: 323px;
+  width: 100%;
   padding: 1rem;
   color: white;
   text-align: center;
   font-size: 1.1rem;
   border-radius: 6px;
+  margin: 0;
 }
 
-.bg-blue-500 { background-color: #007bff; }
-.bg-green-500 { background-color: #28a745; }
-.bg-red-500 { background-color: #dc3545; }
-.bg-purple-500 { background-color: #6610f2; }
-.bg-orange-500 { background-color: #fd7e14; }
-.bg-teal-500 { background-color: #20c997; }
+.bg-blue-500 { background-color: #2196F3; }
+.bg-green-500 { background-color: #4CAF50; }
+.bg-red-500 { background-color: #FF5252; }
+.bg-purple-500 { background-color: #9C27B0; }
+.bg-orange-500 { background-color: #FF9800; }
+.bg-teal-500 { background-color: #009688; }
 
 .arrow {
   font-size: 1.5rem;
-  color: #28a745;
-  margin: -0.25rem 0;
+  color: #4CAF50;
+  text-align: center;
+  margin: 0.25rem 0;
 }
 
-/* Existing styles remain the same until media query */
-
+/* Mobile Styles */
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   #generator-container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
-  
+
   #generator {
-    padding: 1.5rem;
+    position: relative;
+    top: 0;
+    padding: 1rem;
   }
 
   .category-item {
-    padding: 0.75rem 0;
+    margin-bottom: 0.75rem;
   }
 
   .category-item label {
-    font-size: 1.2rem;
-    margin-right: 1rem;
+    font-size: 0.95rem;
   }
 
   .category-item select {
-    width: 100px;
-    padding: 0.75rem;
-    font-size: 1.2rem;
+    padding: 0.5rem;
+    font-size: 0.95rem;
   }
 
   .item {
-    width: 100%;
-    max-width: none;
-    padding: 1.25rem;
-    font-size: 1.2rem;
-    margin: 0 1rem;
+    font-size: 1rem;
+    padding: 0.75rem;
   }
 
   #generateButton {
-    padding: 1rem;
-    font-size: 1.25rem;
+    padding: 0.75rem;
+    font-size: 1rem;
   }
 }
