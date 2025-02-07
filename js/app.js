@@ -1,5 +1,5 @@
 // js/app.js
-import { createCategorySettings, getSelectedCategories, generateInstructions } from './modules/generator.js';
+import { createCategorySettings, getSelectedCategories, generateInstructions } from './generator.js';
 
 let config = null;
 
